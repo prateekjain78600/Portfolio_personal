@@ -43,6 +43,7 @@ const Navbar = ({isDarkMode,setIsDarkMode}) => {
             src={isDarkMode?assets.logo_dark:assets.logo}
             className="w-28 cursor-pointer mr-14"
             alt={""}
+            style={{backgroundColor:!isDarkMode?"#000":"transparent",borderRadius:"25px",}}
           />
         </a>
         <ul

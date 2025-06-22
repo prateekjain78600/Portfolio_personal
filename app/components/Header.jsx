@@ -11,11 +11,7 @@ const Header = ({ isDarkMode }) => {
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
       >
-        <Image
-          src={assets.profile_img}
-          alt="Profile"
-          className="rounded-full w-32"
-        />
+        <Image src={assets.Dp} alt="Profile" className="rounded-full w-32" />
       </motion.div>
       <motion.h3
         initial={{ y: -20, opacity: 0 }}
@@ -40,7 +36,10 @@ const Header = ({ isDarkMode }) => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto font-Ovo"
       >
-        I am a frontend developer
+        A Frontend Developer passionate about building modern, responsive, and
+        high-performance web applications. I specialize in React.js, Next.js,
+        and TypeScript, and currently work as an SDE 1 at Psiborg Technologies.
+        I love turning ideas into clean, scalable, and user-friendly interfaces.
       </motion.p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <motion.a
@@ -61,7 +60,7 @@ const Header = ({ isDarkMode }) => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          href="/sample-resume.pdf"
+          href="/prateekjain.pdf"
           download
           className="px-10 py-3 border border-gray-500 rounded-full flex items-center gap-2 bg-white dark:text-black"
         >
