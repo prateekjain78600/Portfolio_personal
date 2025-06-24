@@ -52,15 +52,20 @@ const Work = ({ isDarkMode }) => {
             className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group overflow-hidden"
             style={{ backgroundImage: `url(${project.bgImage})` }}
           >
-            <div className="bg-white w-10/12 rounded-lg absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-              <div>
+            <div className="bg-white w-10/12  rounded-lg absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+              <div className="flex flex-col justify-between h-full">
                 <h2 className="font-semibold">{project?.title}</h2>
                 <p className="text-sm text-gray-700">{project?.description}</p>
               </div>
 
-              <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+              <a
+                href={project?.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
+              >
                 <Image src={assets.send_icon} alt="send icon" className="w-5" />
-              </div>
+              </a>
             </div>
           </motion.div>
         ))}

@@ -80,24 +80,31 @@ export const assets = {
 
 export const workData = [
   {
-    title: "Frontend project",
-    description: "Web Design",
-    bgImage: "/work-1.png",
+    title: "Employee Tracking",
+    description: "Web Development",
+    bgImage: "/emp.png",
+    link:"https://psiborg.in/staff-tracking-for-workforce-monitoring/"
   },
   {
-    title: "Geo based app",
-    description: "Mobile App",
-    bgImage: "/work-2.png",
-  },
-  {
-    title: "Photography site",
-    description: "Web Design",
+    title: "Temp. and Humi. Monitoring",
+    description: "Desktop Application",
     bgImage: "/work-3.png",
+    link:"https://psiborg.in/temperature-and-humidity-monitoring-system/"
+
   },
   {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
-    bgImage: "/work-4.png",
+    title: "Kids Tracking",
+    description: "Web Development",
+    bgImage: "/work-1.png",
+    link:"https://psiborg.in/child-tracking-system/"
+
+  },
+  {
+    title: "Smart Restroom Solution",
+    description: "Web Development",
+    bgImage: "/restroom.png",
+    link:"https://psiborg.in/smart-restroom-solution/"
+
   },
 ];
 
