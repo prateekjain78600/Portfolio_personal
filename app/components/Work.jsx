@@ -26,7 +26,7 @@ const Work = ({ isDarkMode }) => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-center mb-2 text-5xl font-ovo"
       >
-        My latest Work
+        My Latest Work
       </motion.h2>
       <motion.p
         initial={{ opacity: 0 }}
@@ -34,50 +34,64 @@ const Work = ({ isDarkMode }) => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-center  max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        Welcome to my web developement portfolio! Explore a collection of
-        projects showcasing my expertise in front-end development
+        Welcome to my portfolio! Here is a collection of projects that showcase
+        my expertise in building end-to-end software solutions.
       </motion.p>
 
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.9 }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 my-10 gap-5 dark:text-black"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-10 gap-6" // Updated grid for smaller cards
       >
         {workData.map((project, index) => (
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
+          <motion.a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
             key={index}
-            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group overflow-hidden"
-            style={{ backgroundImage: `url(${project.bgImage})` }}
+            className="relative block w-full overflow-hidden rounded-lg shadow-lg aspect-[4/3] group" // Updated aspect ratio
+            style={{
+              backgroundImage: `url(${project.bgImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            whileHover={{ scale: 1.05 }} // Slightly increased hover scale
+            transition={{ duration: 0.3 }}
           >
-            <div className="bg-white w-10/12  rounded-lg absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-              <div className="flex flex-col justify-between h-full">
-                <h2 className="font-semibold">{project?.title}</h2>
-                <p className="text-sm text-gray-700">{project?.description}</p>
-              </div>
+            {/* Permanent gradient for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
-              <a
-                href={project?.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
-              >
-                <Image src={assets.send_icon} alt="send icon" className="w-5" />
-              </a>
+            {/* Always visible project info */}
+            <div className="absolute bottom-0 left-0 p-4 text-white">
+              <h2 className="text-md font-bold">{project?.title}</h2>
+              <p className="text-xs opacity-90">{project?.description}</p>
             </div>
-          </motion.div>
+
+            {/* Hover overlay with a "View Project" CTA */}
+            <div className="absolute inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+              <div className="flex items-center gap-2 px-4 py-2 text-sm text-white border border-white rounded-full">
+                <span>View Project</span>
+                <Image
+                  src={assets.right_arrow_white}
+                  alt="arrow"
+                  className="w-4"
+                />
+              </div>
+            </div>
+          </motion.a>
         ))}
       </motion.div>
-      <motion.a
+      {/* <motion.a
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 1.1 }}
-        href=""
+        href="https://github.com/prateekjain78600" // Link to your GitHub
+        target="_blank"
+        rel="noopener noreferrer"
         className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-light-hover duration-500 dark:text-white dark:border-white dark:hover:bg-dark-hover"
       >
-        Show more{" "}
+        See more on GitHub{" "}
         <Image
           src={
             isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold
@@ -85,7 +99,7 @@ const Work = ({ isDarkMode }) => {
           alt="right arrow"
           className="w-4"
         />
-      </motion.a>
+      </motion.a> */}
     </motion.div>
   );
 };

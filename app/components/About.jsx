@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { assets, infoList, toolsData } from "@/assets/assets";
 import { motion } from "motion/react";
+
 const About = ({ isDarkMode }) => {
   return (
     <motion.div
@@ -50,15 +51,16 @@ const About = ({ isDarkMode }) => {
           className="flex-1"
         >
           <p className="mb-10 max-w-2xl font-ovo">
-            I am an experienced Frontend Developer with over 1.5 year of
-            professional expertise in building scalable, high-performance web
-            applications. I have had the opportunity to work with leading
-            organizations like PsiBorg Technologies, where I contributed to
-            real-time dashboards, IoT-based systems, and desktop applications.
-            My technical toolkit includes React.js, Next.js, TypeScript,
-            Electron.js, and modern state management tools like Redux and React
-            Query. I take pride in writing clean, maintainable code and
-            delivering seamless user experiences.
+            I am a results-driven Software Engineer with 2 years of experience
+            in architecting and deploying high-impact, end-to-end web solutions.
+            At PsiBorg Technologies, I've contributed to a diverse range of
+            projects, including real-time IoT dashboards, asset-tracking
+            systems, and high-performance desktop applications. My technical
+            expertise is centered around the MERN stack (MongoDB, Express.js,
+            React.js, Node.js), complemented by advanced skills in Next.js,
+            TypeScript, and Electron.js. I am passionate about writing clean,
+            scalable code and transforming complex requirements into efficient
+            and user-centric applications.
           </p>
 
           <motion.ul

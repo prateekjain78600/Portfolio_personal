@@ -6,7 +6,6 @@ import edu_icon_dark from "./edu-icon-dark.png";
 import project_icon from "./project-icon.png";
 import project_icon_dark from "./project-icon-dark.png";
 import vscode from "./vscode.png";
-import firebase from "./firebase.png";
 import figma from "./figma.png";
 import git from "./git.png";
 import mongodb from "./mongodb.png";
@@ -37,6 +36,16 @@ import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 
+// --- Import new tool images (You need to add these files) ---
+import reactjs from "./react.png";
+import nodejs from "./node.png";
+import nextjs from "./nextjs.png";
+import docker from "./docker.png";
+import typescript from "./typescript.png";
+import postman from "./postman.png";
+import javascript from "./javascript.png";
+import tailwind from "./tailwind.png";
+
 export const assets = {
   user_image,
   code_icon,
@@ -46,7 +55,6 @@ export const assets = {
   project_icon,
   project_icon_dark,
   vscode,
-  firebase,
   figma,
   git,
   mongodb,
@@ -76,92 +84,94 @@ export const assets = {
   right_arrow_bold,
   right_arrow_bold_dark,
   Dp,
+  // --- Export new tool images ---
+  reactjs,
+  nodejs,
+  nextjs,
+  docker,
+  typescript,
+  postman,
+  javascript,
+  tailwind,
 };
 
 export const workData = [
   {
-    title: "Employee Tracking",
-    description: "Web Development",
+    title: "Real-Time Manpower Tracking",
+    description: "A Next.js dashboard with custom Leaflet.js visualizations and RBAC.",
     bgImage: "/emp.png",
-    link:"https://psiborg.in/staff-tracking-for-workforce-monitoring/"
+    link: "https://psiborg.in/staff-tracking-for-workforce-monitoring/",
   },
   {
-    title: "Temp. and Humi. Monitoring",
-    description: "Desktop Application",
+    title: "Temp. & Humidity Monitoring",
+    description: "Full-stack desktop app using Electron.js and Node.js for real-time monitoring.",
     bgImage: "/work-3.png",
-    link:"https://psiborg.in/temperature-and-humidity-monitoring-system/"
-
+    link: "https://psiborg.in/temperature-and-humidity-monitoring-system/",
   },
   {
-    title: "Kids Tracking",
-    description: "Web Development",
+    title: "SOS Device Management System",
+    description: "An end-to-end system with a Node.js API and React geo-fencing interface.",
     bgImage: "/work-1.png",
-    link:"https://psiborg.in/child-tracking-system/"
-
+    link: "https://psiborg.in/child-tracking-system/",
   },
   {
-    title: "Smart Restroom Solution",
-    description: "Web Development",
+    title: "Smart Washroom System",
+    description: "An IoT dashboard visualizing data from 200+ sensors using WebSockets.",
     bgImage: "/restroom.png",
-    link:"https://psiborg.in/smart-restroom-solution/"
-
+    link: "https://psiborg.in/smart-restroom-solution/",
   },
 ];
 
+// --- Updated serviceData to be more descriptive and accurate ---
 export const serviceData = [
   {
     icon: assets.web_icon,
-    title: "Web design",
-    description: "Web development is the process of building, programming...",
+    title: "Full-Stack Web Applications",
+    description:
+      "Architecting scalable end-to-end web solutions, from robust RESTful APIs and databases to responsive, high-performance user interfaces.",
     link: "",
   },
   {
     icon: assets.mobile_icon,
-    title: "Desktop app",
+    title: "IoT & Desktop Solutions",
     description:
-      "Desktop app development involves creating software for windows...",
+      "Developing real-time IoT dashboards for data visualization and creating cross-platform desktop applications with technologies like Electron.js.",
     link: "",
   },
-//   {
-//     icon: assets.ui_icon,
-//     title: "UI/UX design",
-//     description:
-//       "UI/UX design focuses on creating a seamless user experience...",
-//     link: "",
-//   },
-//   {
-//     icon: assets.graphics_icon,
-//     title: "Graphics design",
-//     description: "Creative design solutions to enhance visual communication...",
-//     link: "",
-//   },
 ];
 
 export const infoList = [
   {
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
-    title: "Languages",
-    description: "HTML, CSS, JavaScript React Js, Next Js, Typescript, React Query, Redux",
+    title: "Core Stack",
+    description: "MERN (MongoDB, Express, React, Node.js), Next.js, TypeScript",
   },
   {
     icon: assets.edu_icon,
     iconDark: assets.edu_icon_dark,
     title: "Education",
-    description: "B.Tech in Computer Science",
+    description: "B.Tech in Computer Science & Engineering",
   },
   {
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
-    title: "Projects",
-    description: "Built more than 5 projects",
+    title: "Experience",
+    description: "2+ years in professional software development",
   },
 ];
 
+// --- Updated toolsData to reflect resume skills ---
 export const toolsData = [
-  assets.vscode,
-  assets.firebase,
+  assets.reactjs,
+  assets.nextjs,
+  assets.nodejs,
   assets.mongodb,
-  assets.figma,
+  assets.typescript,
+  assets.docker,
   assets.git,
+  assets.vscode,
+  assets.postman,
+  assets.javascript,
+  assets.tailwind,
 ];
